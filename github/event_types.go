@@ -462,6 +462,11 @@ type PingEvent struct {
 	HookID *int64 `json:"hook_id,omitempty"`
 	// The webhook configuration.
 	Hook         *Hook         `json:"hook,omitempty"`
+
+	// The following fields are only populated by Webhook events.
+	Repo         *Repository   `json:"repository,omitempty"`
+	Org          *Organization `json:"organization,omitempty"`
+	Sender       *User         `json:"sender,omitempty"`
 	Installation *Installation `json:"installation,omitempty"`
 }
 

@@ -6308,6 +6308,30 @@ func (p *PingEvent) GetInstallation() *Installation {
 	return p.Installation
 }
 
+// GetOrg returns the Org field.
+func (p *PingEvent) GetOrg() *Organization {
+	if p == nil {
+		return nil
+	}
+	return p.Org
+}
+
+// GetRepo returns the Repo field.
+func (p *PingEvent) GetRepo() *Repository {
+	if p == nil {
+		return nil
+	}
+	return p.Repo
+}
+
+// GetSender returns the Sender field.
+func (p *PingEvent) GetSender() *User {
+	if p == nil {
+		return nil
+	}
+	return p.Sender
+}
+
 // GetZen returns the Zen field if it's non-nil, zero value otherwise.
 func (p *PingEvent) GetZen() string {
 	if p == nil || p.Zen == nil {
